@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css"> 
+</head>
+
+<title>Bookify - Empréstimo</title> <!--título da página-->
+
+<body class="d-flex flex-column">   
+    <header>
+        <nav class="nav-bar">
+            <div class="logo">
+                <h1><a href="index.html" class="bookify-text">Bookify</a></h1>
+            </div>
+    
+            <div class="nav-list"> <!--botões de navegação-->
+                <ul>
+                    <li class="nav-item"><a href="cadastrar_cliente.html" class="nav-link">Cadastro de Cliente</a></li>
+                    <li class="nav-item"><a href="cadastrar_livro.html" class="nav-link">Cadastro de Livro</a></li>
+                    <li class="nav-item"><a href="emprestimo.html" class="nav-link">Empréstimo</a></li>
+                    <li class="nav-item"><a href="acervo.html" class="nav-link">Acervo</a></li>
+                    <li class="nav-item"><a href="clientes.html" class="nav-link">Clientes</a></li>
+                </ul>
+            </div>
+
+            <div class="mobile-menu-icon">
+                <button onclick="menuShow()">
+                    <img class="icon menu-icon" src="assets/img/menu_white_36dp.svg" alt="Menu Ícone">
+                </button>
+            </div>
+    
+            <div class="mobile-menu"> <!---->
+                <ul>
+                    <li class="nav-item"><a href="cadastrar_cliente.html" class="nav-link">Cadastro de Cliente</a></li>
+                    <li class="nav-item"><a href="cadastrar_livro.html" class="nav-link">Cadastro de Livro</a></li>
+                    <li class="nav-item"><a href="emprestimo.html" class="nav-link">Empréstimo</a></li>
+                    <li class="nav-item"><a href="acervo.html" class="nav-link">Acervo</a></li>
+                    <li class="nav-item"><a href="clientes.html" class="nav-link">Clientes</a></li>
+                </ul>   
+            </div>
+        </nav>
+    </header>
+
+    <div class="toggle-mode">
+        <button id="mode-toggle-btn" onclick="toggleMode()"> <!--Botão que ativa e desativa o modo noturno-->
+            <img src="assets/img/sun-svgrepo-com.svg" alt="Modo Noturno" class="moon-icon hidden">
+            <img src="assets/img/crescent-moon-svgrepo-com-2.svg" alt="Modo Claro" class="sun-icon">
+        </button>
+    </div>
+
+    <div class="container mt-5 flex-grow-1 d-flex justify-content-center align-items-center"> <!--formulários de inserção de dados-->
+        <div class="content">
+            <h2 class="mb-4">Formulário de Empréstimo</h2>
+            <form id="emprestimoLivroForm">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="titulo" placeholder="Título do Livro" name="titulo" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="nome" placeholder="Nome completo" name="nome" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" class="form-control" id="email" placeholder="E-mail" name="email" required>
+                </div>
+                <button type="submit" class="btn btn-dark btn-block">Garantir meu empréstimo</button>
+            </form>
+        </div>
+    </div>
+
+     <footer class="footer"> 
+        <nav class="nav-bar">
+            <div class="logo"> <!--logo do bookfy-->
+                <h1><a href="index.html" class="bookify-text">Bookify</a></h1>
+            </div>
+            <div class="social-icons"> <!--ícones que redirecionam às redes sociais-->
+                <a href="https://www.facebook.com/?locale=pt_BR" class="social-icon" target="_blank"><img src="assets/img/facebook.png" alt="Facebook"></a>
+                <a href="https://br.linkedin.com/" class="social-icon" target="_blank"><img src="assets/img/linkedin.png" alt="Linkedin"></a>
+                <a href="https://www.instagram.com/" class="social-icon" target="_blank"><img src="assets/img/instagram.png" alt="Instagram"></a>
+            </div>
+        </nav>
+    </footer>
+
+    <script src="assets/js/script.js"></script> 
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

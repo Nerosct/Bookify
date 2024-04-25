@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<title>Bookify - Cadastrar Livro</title>
+
+</head>
+
+<body class="d-flex flex-column"> <!--a classe para um layout flexível em coluna-->
+    <header>
+        <nav class="nav-bar">
+            <div class="logo">
+                <h1><a href="index.html" class="bookify-text">Bookify</a></h1>
+            </div>
+            <div class="nav-list">
+                <ul>
+                    <!--links apra as páginas de cadastro, empréstimo e acervo -->
+                    <li class="nav-item"><a href="cadastrar_cliente.html" class="nav-link">Cadastro de Cliente</a></li>
+                    <li class="nav-item"><a href="cadastrar_livro.html" class="nav-link">Cadastro de Livro</a></li>
+                    <li class="nav-item"><a href="emprestimo.html" class="nav-link">Empréstimo</a></li>
+                    <li class="nav-item"><a href="acervo.html" class="nav-link">Acervo</a></li>
+                    <li class="nav-item"><a href="clientes.html" class="nav-link">Clientes</a></li>
+                </ul>
+            </div>
+
+            <div class="mobile-menu-icon">
+                <!--ícone do menu para dispositivos móveis-->
+                <button onclick="menuShow()">
+                    <img class="icon menu-icon" src="assets/img/menu_white_36dp.svg" alt="Menu Ícone">
+                </button>
+            </div>
+
+            <div class="mobile-menu">
+                <!--Menu suspenso para dispositivos móveis-->
+                <ul>
+                    <!--links para páginas de cadastro, empréstimo e acervo-->
+                    <li class="nav-item"><a href="cadastrar_cliente.html" class="nav-link">Cadastro de Cliente</a></li>
+                    <li class="nav-item"><a href="cadastrar_livro.html" class="nav-link">Cadastro de Livro</a></li>
+                    <li class="nav-item"><a href="emprestimo.html" class="nav-link">Empréstimo</a></li>
+                    <li class="nav-item"><a href="acervo.html" class="nav-link">Acervo</a></li>
+                    <li class="nav-item"><a href="clientes.html" class="nav-link">Clientes</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="toggle-mode">
+        <!--Botão para alternar entre o modo claro e escuro-->
+        <button id="mode-toggle-btn" onclick="toggleMode()">
+            <img src="assets/img/sun-svgrepo-com.svg" alt="Modo Noturno" class="moon-icon hidden">
+            <img src="assets/img/crescent-moon-svgrepo-com-2.svg" alt="Modo Claro" class="sun-icon">
+        </button>
+    </div>
+
+    <div class="container mt-5 flex-grow-1 d-flex justify-content-center align-items-center">
+        <!--conteiner principal-->
+        <div class="content">
+            <!--formulário de cadastro de livros-->
+            <h2 class="mb-4">Cadastro de Livros</h2>
+            <form id="cadastroLivroForm">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="titulo" placeholder="Título" name="titulo" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="autor" placeholder="Autor" name="autor" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="genero" placeholder="Gênero" name="genero" required>
+
+                </div>
+              
+                <button type="submit" class="btn btn-dark btn-block">Cadastrar Livro</button>
+            </form>
+        </div>
+    </div>
+
+    <footer class="footer"> <!--Rodapé-->
+        <nav class="nav-bar">
+            <div class="logo">
+                <h1><a href="index.html" class="bookify-text">Bookify</a></h1>
+            </div>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/?locale=pt_BR" class="social-icon" target="_blank"><img
+                        src="assets/img/facebook.png" alt="Facebook"></a>
+                <a href="https://br.linkedin.com/" class="social-icon" target="_blank"><img
+                        src="assets/img/linkedin.png" alt="Linkedin"></a>
+                <a href="https://www.instagram.com/" class="social-icon" target="_blank"><img
+                        src="assets/img/instagram.png" alt="Instagram"></a>
+            </div>
+        </nav>
+    </footer>
+    <!--Script Javascript-->
+    <script src="assets/js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

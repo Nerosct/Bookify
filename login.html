@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<title>Bookify - Login</title> <!--título do login-->
+
+<body class="d-flex justify-content-center align-items-center vh-100">  <!--formatação para centralizar os itens-->
+    <div class="toggle-mode">
+        <button id="mode-toggle-btn" onclick="toggleMode()">
+            <img src="assets/img/sun-svgrepo-com.svg" alt="Modo Claro" class="moon-icon hidden">
+            <img src="assets/img/crescent-moon-svgrepo-com.svg" alt="Modo Noturno" class="sun-icon">
+        </button>
+    </div>
+
+    <div class="container"> <!--conteiner principal-->
+        
+        <div class="row justify-content-center">
+            <!--Linha e coluna para centralizar o formulário-->
+            <div class="col-md-6">
+                <h1 id="typing-effect" class="text-center mb-5 courier-font">
+                    <span class="bookify-text">Bookify</span>
+                </h1>
+                <form id="crud-form">
+                    <!--formulário de login-->
+                    <div class="form-group">
+                        <!--Grupo de formulário para o campo de login-->
+                        <input type="text" id="login" class="form-control" placeholder="Login" required>
+                    </div>
+                    <div class="form-group">
+                        <!--grupo de formulários para o campo de senha-->
+                        <input type="password" id="senha" class="form-control" placeholder="Senha" required>
+                    </div>
+                    <button type="submit" id="submit-btn" class="btn btn-dark btn-block">Entrar</button>
+                    <button id="google-login" class="btn btn-dark btn-block">
+                        <img src="assets/img/Logo-google-icon-PNG.png" alt="Google" class="google-icon">
+                        Login com Google
+                    </button>                    
+                </form>
+                <div class="text-center mt-3">
+                    <a href="#" class="forgot-password">Esqueceu a senha?</a>
+                    <span class="mx-2">|</span> <!--separador-->
+                    <button id="create-account" class="btn btn-outline-dark" onclick="window.location.href = 'cadastrar_usuario.html';">
+                        <!--botão para criar nova conta-->
+                        Criar conta
+                    </button>                                       
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--inclui o arquivo do javascript-->
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
